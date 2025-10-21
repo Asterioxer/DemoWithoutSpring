@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="dev" class="org.example.Dev">
+<!--        <property name="age" value="12"/>-->
+<!--        <constructor-arg index="0" value="14"/>-->
+<!--        <constructor-arg index="1" value="21000"/>-->
+<!--        <property name="laptop" ref="lap1"/>-->
+        <property name="comp" ref="desk1"/>  <!-- for ref = lap1 we get Compiling on Laptop and
+                                              for ref = desk1 we get Compiling on Desktop (property of ref is being injected)-->
+    </bean>
+
+    <bean id="desk1" class="org.example.Desktop">
+    </bean>
+
+<!--    <bean id="dev1" class="org.example.Dev">-->
+
+<!--    </bean>  this is unused-->
+
+    <bean id="lap1" class="org.example.Laptop">
+
+    </bean>
+
+</beans>
