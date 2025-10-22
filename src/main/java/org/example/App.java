@@ -16,3 +16,5 @@ public class App {
         obj.build();
     }
 }
+
+//This project is bean based ,the other one was annotation based like @Component, @Autowired, etc.....
